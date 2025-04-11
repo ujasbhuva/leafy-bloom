@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Header from "@/components/Header";
@@ -40,11 +39,9 @@ const Plants = () => {
     features: [],
   });
   
-  // Apply filters and sorting
   useEffect(() => {
     let result = [...plants];
 
-    // Apply filters
     if (filters.category) {
       result = result.filter(plant => plant.category === filters.category);
     }
@@ -77,7 +74,6 @@ const Plants = () => {
       });
     }
     
-    // Apply sorting
     switch (sortOption) {
       case "price-low-high":
         result.sort((a, b) => (a.salePrice ?? a.price) - (b.salePrice ?? b.price));
@@ -111,7 +107,6 @@ const Plants = () => {
     
     setFilteredPlants(result);
     
-    // Update URL params
     const params = new URLSearchParams();
     if (sortOption !== "featured") params.set("sort", sortOption);
     if (filters.category) params.set("category", filters.category);
@@ -196,14 +191,12 @@ const Plants = () => {
         <section className="py-8">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row gap-8">
-              {/* Desktop filter sidebar */}
               {!isMobile && (
                 <div className="md:w-1/4 lg:w-1/5">
                   <FilterSidebar onFilterChange={handleFilterChange} activeFilters={filters} />
                 </div>
               )}
               
-              {/* Mobile filter drawer */}
               {isMobile && (
                 <Sheet>
                   <div className="flex justify-between items-center mb-4">
@@ -224,10 +217,8 @@ const Plants = () => {
                 </Sheet>
               )}
               
-              {/* Plant grid */}
               <div className="flex-1">
                 <div className="mb-6 flex flex-col gap-4">
-                  {/* Desktop sorting */}
                   {!isMobile && (
                     <div className="flex justify-between items-center">
                       <div>
@@ -239,10 +230,9 @@ const Plants = () => {
                     </div>
                   )}
                   
-                  {/* Active filters display */}
                   {renderActiveFilters()}
                   
-                  {activeFilters && <Separator />}
+                  {renderActiveFilters() && <Separator />}
                 </div>
                 
                 {filteredPlants.length > 0 ? (
