@@ -33,7 +33,7 @@
     --input: 60 10% 85%;
     --ring: 120 15% 49%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
   }
 
   .dark {
@@ -76,6 +76,10 @@
     @apply bg-plant-background text-plant-charcoal;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
 }
 
 @layer utilities {
@@ -84,6 +88,20 @@
   }
   
   .plant-hover-animation {
-    @apply transition-all duration-300 ease-in-out hover:animate-card-hover;
+    @apply transition-all duration-300 ease-in-out hover:translate-y-[-5px] hover:shadow-md;
   }
+  
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-sm border border-white/50;
+  }
+}
+
+/* Hide scrollbar while keeping functionality */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

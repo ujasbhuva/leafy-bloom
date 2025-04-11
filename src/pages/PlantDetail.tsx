@@ -8,17 +8,25 @@ import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { plants } from "@/data/plants";
 import { ArrowLeft, Heart, Minus, Plus, ShoppingCart } from "lucide-react";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import FeaturedPlants from "@/components/FeaturedPlants";
+import { useWishlist } from "@/providers/WishlistProvider";
+import { useCart } from "@/providers/CartProvider";
+import { cn } from "@/lib/utils";
 
 const PlantDetail = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { toast } = useToast();
+  
   const plant = plants.find((p) => p.id === id);
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
+  const { addToCart } = useCart();
   
   const [quantity, setQuantity] = useState(1);
   const [selectedImage, setSelectedImage] = useState(0);
+  
+  const isLiked = plant ? isInWishlist(plant.id) : false;
   
   if (!plant) {
     return (
@@ -29,7 +37,7 @@ const PlantDetail = () => {
           <p className="text-muted-foreground mb-6">
             Sorry, we couldn't find the plant you're looking for.
           </p>
-          <Button onClick={() => navigate("/plants")}>Return to Plants</Button>
+          <Button onClick={() => navigate("/plants")} className="rounded-full">Return to Plants</Button>
         </div>
         <Footer />
       </div>
@@ -44,17 +52,15 @@ const PlantDetail = () => {
   };
   
   const handleAddToCart = () => {
-    toast({
-      title: "Added to cart",
-      description: `${quantity} × ${plant.name} added to your cart`,
-    });
+    addToCart(plant, quantity);
   };
   
-  const handleAddToWishlist = () => {
-    toast({
-      title: "Added to wishlist",
-      description: `${plant.name} added to your wishlist`,
-    });
+  const handleWishlistToggle = () => {
+    if (isLiked) {
+      removeFromWishlist(plant.id);
+    } else {
+      addToWishlist(plant);
+    }
   };
 
   // Helper functions to render plant attributes
@@ -146,7 +152,7 @@ const PlantDetail = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Image gallery */}
             <div className="space-y-4">
-              <div className="relative aspect-square overflow-hidden rounded-lg bg-muted">
+              <div className="relative aspect-square overflow-hidden rounded-2xl bg-muted">
                 <img
                   src={plant.images[selectedImage]}
                   alt={plant.name}
@@ -159,7 +165,7 @@ const PlantDetail = () => {
                   <button
                     key={i}
                     onClick={() => setSelectedImage(i)}
-                    className={`relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-md ${
+                    className={`relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl ${
                       selectedImage === i ? "ring-2 ring-plant-forest" : ""
                     }`}
                   >
@@ -175,8 +181,8 @@ const PlantDetail = () => {
             
             {/* Plant details */}
             <div>
-              <h1 className="text-3xl font-semibold mb-1">{plant.name}</h1>
-              <p className="text-lg text-muted-foreground italic mb-4">{plant.scientificName}</p>
+              <h1 className="text-3xl font-display font-semibold mb-1">{plant.name}</h1>
+              <p className="text-lg text-muted-foreground italic mb-4 font-display">{plant.scientificName}</p>
               
               <div className="flex items-baseline mb-6">
                 {plant.salePrice ? (
@@ -204,18 +210,18 @@ const PlantDetail = () => {
                 </div>
                 
                 <div className="flex flex-wrap gap-2">
-                  <span className="bg-plant-beige text-xs px-2 py-1 rounded-full">
+                  <span className="bg-plant-beige/50 text-xs px-3 py-1 rounded-full">
                     {plant.category}
                   </span>
                   
                   {plant.petFriendly && (
-                    <span className="bg-plant-beige text-xs px-2 py-1 rounded-full">
+                    <span className="bg-plant-beige/50 text-xs px-3 py-1 rounded-full">
                       Pet Friendly
                     </span>
                   )}
                   
                   {plant.airPurifying && (
-                    <span className="bg-plant-beige text-xs px-2 py-1 rounded-full">
+                    <span className="bg-plant-beige/50 text-xs px-3 py-1 rounded-full">
                       Air Purifying
                     </span>
                   )}
@@ -225,7 +231,7 @@ const PlantDetail = () => {
               <p className="text-muted-foreground mb-6">{plant.description}</p>
               
               <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="p-3 bg-plant-beige/30 rounded-lg text-sm text-center">
+                <div className="p-3 bg-plant-beige/30 rounded-xl text-sm text-center">
                   <div className="text-plant-forest mb-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mx-auto mb-1">
                       <path d="M12 2v10"></path>
@@ -237,7 +243,7 @@ const PlantDetail = () => {
                   {renderCareLevel(plant.careLevel)}
                 </div>
                 
-                <div className="p-3 bg-plant-beige/30 rounded-lg text-sm text-center">
+                <div className="p-3 bg-plant-beige/30 rounded-xl text-sm text-center">
                   <div className="text-plant-forest mb-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mx-auto mb-1">
                       <circle cx="12" cy="12" r="5"></circle>
@@ -254,7 +260,7 @@ const PlantDetail = () => {
                   {renderLightLevel(plant.light)}
                 </div>
                 
-                <div className="p-3 bg-plant-beige/30 rounded-lg text-sm text-center">
+                <div className="p-3 bg-plant-beige/30 rounded-xl text-sm text-center">
                   <div className="text-plant-forest mb-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mx-auto mb-1">
                       <path d="M7 21h10"></path>
@@ -271,13 +277,13 @@ const PlantDetail = () => {
               <Separator className="my-6" />
               
               <div className="flex gap-4 items-center mb-6">
-                <div className="flex items-center border rounded-md">
+                <div className="flex items-center border rounded-full overflow-hidden">
                   <Button
                     variant="ghost"
                     size="icon"
                     onClick={() => handleQuantityChange(-1)}
                     disabled={quantity <= 1}
-                    className="h-10 w-10"
+                    className="h-10 w-10 rounded-full"
                   >
                     <Minus className="h-4 w-4" />
                   </Button>
@@ -286,14 +292,14 @@ const PlantDetail = () => {
                     variant="ghost"
                     size="icon"
                     onClick={() => handleQuantityChange(1)}
-                    className="h-10 w-10"
+                    className="h-10 w-10 rounded-full"
                   >
                     <Plus className="h-4 w-4" />
                   </Button>
                 </div>
                 
                 <Button 
-                  className="flex-1 bg-plant-sage hover:bg-plant-forest" 
+                  className="flex-1 bg-plant-sage hover:bg-plant-forest rounded-full" 
                   onClick={handleAddToCart}
                   disabled={plant.availability === "out-of-stock"}
                 >
@@ -304,9 +310,13 @@ const PlantDetail = () => {
                 <Button 
                   variant="outline" 
                   size="icon"
-                  onClick={handleAddToWishlist}
+                  className={cn(
+                    "rounded-full",
+                    isLiked && "text-rose-500 border-rose-200 hover:text-rose-600"
+                  )}
+                  onClick={handleWishlistToggle}
                 >
-                  <Heart className="h-4 w-4" />
+                  <Heart className={cn("h-4 w-4", isLiked && "fill-current")} />
                 </Button>
               </div>
             </div>
