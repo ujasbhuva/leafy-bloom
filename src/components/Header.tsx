@@ -20,7 +20,7 @@ const Header = () => {
   const wishlistCount = wishlistItems.length;
   
   const isActive = (path: string) => {
-    return location.pathname === path ? "text-plant-forest font-medium" : "text-plant-charcoal hover:text-plant-forest";
+    return location.pathname === path || location.pathname.startsWith(path + '/') ? "text-plant-forest font-medium" : "text-plant-charcoal hover:text-plant-forest";
   };
   
   return (
@@ -45,7 +45,7 @@ const Header = () => {
                     <nav className="flex flex-col space-y-4">
                       <Link to="/" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Home</Link>
                       <Link to="/plants" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Plants</Link>
-                      <Link to="/care" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Plant Care</Link>
+                      <Link to="/blogs" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Plant Care</Link>
                       <Link to="/about" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>About Us</Link>
                       <Link to="/cart" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Cart</Link>
                       <Link to="/wishlist" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Wishlist</Link>
@@ -79,7 +79,7 @@ const Header = () => {
             <nav className="hidden md:flex items-center space-x-6">
               <Link to="/" className={`${isActive('/')} transition-colors`}>Home</Link>
               <Link to="/plants" className={`${isActive('/plants')} transition-colors`}>Plants</Link>
-              <Link to="/care" className={`${isActive('/care')} transition-colors`}>Plant Care</Link>
+              <Link to="/blogs" className={`${isActive('/blogs')} transition-colors`}>Plant Care</Link>
               <Link to="/about" className={`${isActive('/about')} transition-colors`}>About Us</Link>
             </nav>
           )}
