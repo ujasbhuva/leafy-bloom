@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,14 +14,17 @@ const Header = () => {
   const { getItemCount } = useCart();
   const { wishlistItems } = useWishlist();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   const cartCount = getItemCount();
   const wishlistCount = wishlistItems.length;
-  
+
   const isActive = (path: string) => {
-    return location.pathname === path || location.pathname.startsWith(path + '/') ? "text-plant-forest font-medium" : "text-plant-charcoal hover:text-plant-forest";
+    return location.pathname === path ||
+      location.pathname.startsWith(path + "/")
+      ? "text-plant-forest font-medium"
+      : "text-plant-charcoal hover:text-plant-forest";
   };
-  
+
   return (
     <header className="sticky top-0 z-40 w-full bg-plant-background/80 backdrop-blur-md border-b border-plant-beige py-3">
       <div className="container mx-auto px-4">
@@ -38,25 +40,83 @@ const Header = () => {
                 </SheetTrigger>
                 <SheetContent side="left" className="w-[300px]">
                   <div className="flex flex-col space-y-6 py-6">
-                    <Link to="/" className="flex items-center mb-6" onClick={() => setIsMenuOpen(false)}>
-                      <span className="text-2xl font-display font-semibold text-plant-forest">Leafy</span>
-                      <span className="text-plant-sage font-display">Bloom</span>
+                    <Link
+                      to="/"
+                      className="flex items-center mb-6"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <img
+                        src="/plant.png"
+                        alt="Logo"
+                        className="h-8 w-8 mr-2"
+                      />
+                      <span className="text-2xl font-display font-semibold text-plant-forest">
+                        Leafy
+                      </span>
+                      <span className="text-plant-sage font-display">
+                        Bloom
+                      </span>
                     </Link>
                     <nav className="flex flex-col space-y-4">
-                      <Link to="/" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Home</Link>
-                      <Link to="/plants" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Plants</Link>
-                      <Link to="/blogs" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Plant Care</Link>
-                      <Link to="/about" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>About Us</Link>
-                      <Link to="/cart" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Cart</Link>
-                      <Link to="/wishlist" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Wishlist</Link>
-                      <Link to="/order-management" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>My Orders</Link>
+                      <Link
+                        to="/"
+                        className="text-plant-charcoal hover:text-plant-forest transition-colors py-2"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Home
+                      </Link>
+                      <Link
+                        to="/plants"
+                        className="text-plant-charcoal hover:text-plant-forest transition-colors py-2"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Plants
+                      </Link>
+                      <Link
+                        to="/blogs"
+                        className="text-plant-charcoal hover:text-plant-forest transition-colors py-2"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Plant Care
+                      </Link>
+                      <Link
+                        to="/about"
+                        className="text-plant-charcoal hover:text-plant-forest transition-colors py-2"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        About Us
+                      </Link>
+                      <Link
+                        to="/cart"
+                        className="text-plant-charcoal hover:text-plant-forest transition-colors py-2"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Cart
+                      </Link>
+                      <Link
+                        to="/wishlist"
+                        className="text-plant-charcoal hover:text-plant-forest transition-colors py-2"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Wishlist
+                      </Link>
+                      <Link
+                        to="/order-management"
+                        className="text-plant-charcoal hover:text-plant-forest transition-colors py-2"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        My Orders
+                      </Link>
                     </nav>
                   </div>
                 </SheetContent>
               </Sheet>
             )}
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-display font-semibold text-plant-forest">Leafy</span>
+              <img src="/plant.png" alt="Logo" className="h-8 w-8 mr-2" />
+              <span className="text-2xl font-display font-semibold text-plant-forest">
+                Leafy
+              </span>
               <span className="text-plant-sage font-display">Bloom</span>
             </Link>
           </div>
@@ -78,10 +138,27 @@ const Header = () => {
           {/* Navigation Links - Hidden on mobile */}
           {!isMobile && (
             <nav className="hidden md:flex items-center space-x-6">
-              <Link to="/" className={`${isActive('/')} transition-colors`}>Home</Link>
-              <Link to="/plants" className={`${isActive('/plants')} transition-colors`}>Plants</Link>
-              <Link to="/blogs" className={`${isActive('/blogs')} transition-colors`}>Plant Care</Link>
-              <Link to="/about" className={`${isActive('/about')} transition-colors`}>About Us</Link>
+              <Link to="/" className={`${isActive("/")} transition-colors`}>
+                Home
+              </Link>
+              <Link
+                to="/plants"
+                className={`${isActive("/plants")} transition-colors`}
+              >
+                Plants
+              </Link>
+              <Link
+                to="/blogs"
+                className={`${isActive("/blogs")} transition-colors`}
+              >
+                Plant Care
+              </Link>
+              <Link
+                to="/about"
+                className={`${isActive("/about")} transition-colors`}
+              >
+                About Us
+              </Link>
             </nav>
           )}
 
@@ -93,7 +170,11 @@ const Header = () => {
               </Button>
             )}
             <Link to="/wishlist">
-              <Button variant="ghost" size="icon" className="rounded-full relative">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full relative"
+              >
                 <Heart className="h-5 w-5" />
                 {wishlistCount > 0 && (
                   <span className="absolute -top-1 -right-1 h-4 w-4 bg-plant-terracotta text-white rounded-full flex items-center justify-center text-xs">
@@ -103,7 +184,11 @@ const Header = () => {
               </Button>
             </Link>
             <Link to="/cart">
-              <Button variant="ghost" size="icon" className="rounded-full relative">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full relative"
+              >
                 <ShoppingCart className="h-5 w-5" />
                 {cartCount > 0 && (
                   <span className="absolute -top-1 -right-1 h-4 w-4 bg-plant-terracotta text-white rounded-full flex items-center justify-center text-xs">
