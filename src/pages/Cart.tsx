@@ -6,10 +6,11 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Trash2, Minus, Plus, ArrowRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity, clearCart, getCartTotal } = useCart();
+  const navigate = useNavigate();
   
   if (cartItems.length === 0) {
     return (
@@ -139,7 +140,10 @@ const Cart = () => {
                 <span>${getCartTotal().toFixed(2)}</span>
               </div>
               
-              <Button className="w-full rounded-full bg-plant-sage hover:bg-plant-forest">
+              <Button 
+                className="w-full rounded-full bg-plant-sage hover:bg-plant-forest"
+                onClick={() => navigate("/checkout")}
+              >
                 Checkout <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               

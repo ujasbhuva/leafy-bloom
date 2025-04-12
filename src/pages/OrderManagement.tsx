@@ -16,7 +16,8 @@ import {
   CheckCircle,
   Search,
   Calendar,
-  BarChart3
+  BarChart3,
+  ArrowLeft
 } from "lucide-react";
 import { Link } from "react-router-dom";
 

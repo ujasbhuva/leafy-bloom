@@ -29,7 +29,7 @@ const CHECKOUT_STEPS = [
 
 const Checkout = () => {
   const navigate = useNavigate();
-  const { cartItems, getTotalPrice } = useCart();
+  const { cartItems, getCartTotal } = useCart();
   const [currentStep, setCurrentStep] = useState(0);
 
   // Form states
@@ -344,20 +344,20 @@ const Checkout = () => {
                 <h3 className="text-lg font-medium mb-4">Order Summary</h3>
                 <div className="space-y-3">
                   {cartItems.map((item) => (
-                    <div key={item.id} className="flex justify-between items-center">
+                    <div key={item.plant.id} className="flex justify-between items-center">
                       <div className="flex items-center">
                         <img
-                          src={item.images[0]}
-                          alt={item.name}
+                          src={item.plant.images[0]}
+                          alt={item.plant.name}
                           className="h-16 w-16 rounded object-cover mr-3"
                         />
                         <div>
-                          <p className="font-medium">{item.name}</p>
+                          <p className="font-medium">{item.plant.name}</p>
                           <p className="text-sm text-muted-foreground">Qty: {item.quantity}</p>
                         </div>
                       </div>
                       <p className="font-medium">
-                        ${((item.salePrice || item.price) * item.quantity).toFixed(2)}
+                        ${((item.plant.salePrice || item.plant.price) * item.quantity).toFixed(2)}
                       </p>
                     </div>
                   ))}
@@ -368,7 +368,7 @@ const Checkout = () => {
                 <div className="space-y-2">
                   <div className="flex justify-between">
                     <span>Subtotal</span>
-                    <span>${getTotalPrice().toFixed(2)}</span>
+                    <span>${getCartTotal().toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Shipping</span>
@@ -376,16 +376,16 @@ const Checkout = () => {
                   </div>
                   <div className="flex justify-between">
                     <span>Tax</span>
-                    <span>${(getTotalPrice() * 0.0825).toFixed(2)}</span>
+                    <span>${(getCartTotal() * 0.0825).toFixed(2)}</span>
                   </div>
                   <Separator className="my-2" />
                   <div className="flex justify-between font-medium text-lg">
                     <span>Total</span>
                     <span>
                       ${(
-                        getTotalPrice() +
+                        getCartTotal() +
                         (shippingMethod === "standard" ? 5.99 : 12.99) +
-                        getTotalPrice() * 0.0825
+                        getCartTotal() * 0.0825
                       ).toFixed(2)}
                     </span>
                   </div>
