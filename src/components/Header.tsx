@@ -49,6 +49,7 @@ const Header = () => {
                       <Link to="/about" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>About Us</Link>
                       <Link to="/cart" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Cart</Link>
                       <Link to="/wishlist" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Wishlist</Link>
+                      <Link to="/order-management" className="text-plant-charcoal hover:text-plant-forest transition-colors py-2" onClick={() => setIsMenuOpen(false)}>My Orders</Link>
                     </nav>
                   </div>
                 </SheetContent>

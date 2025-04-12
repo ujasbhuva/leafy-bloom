@@ -14,6 +14,9 @@ import Cart from "./pages/Cart";
 import Wishlist from "./pages/Wishlist";
 import Blogs from "./pages/Blogs";
 import BlogDetail from "./pages/BlogDetail";
+import AboutUs from "./pages/AboutUs";
+import Checkout from "./pages/Checkout";
+import OrderManagement from "./pages/OrderManagement";
 
 // Create a new query client instance
 const queryClient = new QueryClient();
@@ -32,6 +35,9 @@ const App = () => (
               <Route path="/wishlist" element={<Wishlist />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/blogs/:id" element={<BlogDetail />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/order-management" element={<OrderManagement />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
