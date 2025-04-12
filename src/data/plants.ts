@@ -1,4 +1,3 @@
-
 export type Plant = {
   id: string;
   name: string;
@@ -29,9 +28,9 @@ export const plants: Plant[] = [
     scientificName: "Monstera deliciosa",
     price: 39.99,
     images: [
-      "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1637967565444-39c1c5ee65fd?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1682440380573-8c75cd8ceef9?auto=format&fit=crop&q=80&w=800",
+      "https://plus.unsplash.com/premium_photo-1678722935747-84963cfcac71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjF8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://plus.unsplash.com/premium_photo-1678722935747-84963cfcac71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjF8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://plus.unsplash.com/premium_photo-1678722935747-84963cfcac71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjF8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
     ],
     category: "Foliage",
     tags: ["trendy", "large-leaf", "tropical"],
@@ -59,9 +58,9 @@ export const plants: Plant[] = [
     scientificName: "Sansevieria trifasciata",
     price: 24.99,
     images: [
-      "https://images.unsplash.com/photo-1593482892290-f54227b3bb3c?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1620127252536-03bdfcb67c86?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1685210967764-d264d3fa8443?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1504489258181-449e0254c0e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjJ8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1504489258181-449e0254c0e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjJ8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1504489258181-449e0254c0e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjJ8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
     ],
     category: "Succulents",
     tags: ["air-purifying", "low-maintenance", "drought-tolerant"],
@@ -89,9 +88,9 @@ export const plants: Plant[] = [
     scientificName: "Ficus lyrata",
     price: 59.99,
     images: [
-      "https://images.unsplash.com/photo-1508022713622-df2d8fb7b4cd?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1578584099737-7c38c4d77fdf?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1563443255504-a492226757f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjN8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1563443255504-a492226757f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjN8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1563443255504-a492226757f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjN8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
     ],
     category: "Foliage",
     tags: ["trendy", "large-leaf", "statement"],
@@ -120,9 +119,9 @@ export const plants: Plant[] = [
     price: 19.99,
     salePrice: 15.99,
     images: [
-      "https://images.unsplash.com/photo-1682480083605-3d5b1541b0c0?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1611211333810-628b93956983?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1662960718082-a39f13bd4a4d?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1519241923167-9c69efe2d7b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjR8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1519241923167-9c69efe2d7b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjR8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1519241923167-9c69efe2d7b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjR8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
     ],
     category: "Trailing",
     tags: ["easy-care", "air-purifying", "hanging"],
@@ -150,9 +149,9 @@ export const plants: Plant[] = [
     scientificName: "Spathiphyllum wallisii",
     price: 34.99,
     images: [
-      "https://images.unsplash.com/photo-1616690710400-a16d146927c5?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1616694554275-a21dc0bda70f?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1602491290348-df1186e8baaf?auto=format&fit=crop&q=80&w=800",
+      "https://plus.unsplash.com/premium_photo-1664475087579-21099320bea3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjV8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://plus.unsplash.com/premium_photo-1664475087579-21099320bea3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjV8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://plus.unsplash.com/premium_photo-1664475087579-21099320bea3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjV8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
     ],
     category: "Flowering",
     tags: ["air-purifying", "low-light", "flowering"],
@@ -180,9 +179,9 @@ export const plants: Plant[] = [
     scientificName: "Zamioculcas zamiifolia",
     price: 29.99,
     images: [
-      "https://images.unsplash.com/photo-1632207181126-67f8161accdf?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1593482826930-e1218578bd01?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1682480068869-26ddd3d7afd2?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1587403122859-34d83e74841d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjZ8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1587403122859-34d83e74841d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjZ8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1587403122859-34d83e74841d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjZ8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
     ],
     category: "Foliage",
     tags: ["drought-tolerant", "low-maintenance", "modern"],
@@ -210,9 +209,9 @@ export const plants: Plant[] = [
     scientificName: "Calathea orbifolia",
     price: 45.99,
     images: [
-      "https://images.unsplash.com/photo-1602746888983-f825b7964119?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1659968686409-6c649211afb0?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1659968686597-14c66efd3f56?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1509648033237-ae6ef40c2838?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mjd8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1509648033237-ae6ef40c2838?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mjd8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1509648033237-ae6ef40c2838?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mjd8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
     ],
     category: "Calathea",
     tags: ["prayer plant", "patterned leaves", "humidity lover"],
@@ -240,9 +239,9 @@ export const plants: Plant[] = [
     scientificName: "Senecio rowleyanus",
     price: 21.99,
     images: [
-      "https://images.unsplash.com/photo-1627758027246-a39836983efd?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1650207200640-3c2493337d62?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1650207201188-9e8035e24786?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1585445490582-9872899757b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mjh8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1585445490582-9872899757b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mjh8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1585445490582-9872899757b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mjh8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
     ],
     category: "Succulents",
     tags: ["hanging", "unique", "drought-tolerant"],
@@ -270,9 +269,9 @@ export const plants: Plant[] = [
     scientificName: "Asplenium nidus",
     price: 27.99,
     images: [
-      "https://images.unsplash.com/photo-1603201749997-9b869a324700?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1622547748775-7d4f1984483a?auto=format&fit=crop&q=80&w=800",
+      "https://plus.unsplash.com/premium_photo-1663090223813-3856b86261be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mjl8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://plus.unsplash.com/premium_photo-1663090223813-3856b86261be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mjl8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://plus.unsplash.com/premium_photo-1663090223813-3856b86261be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mjl8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
     ],
     category: "Ferns",
     tags: ["humidity lover", "pet friendly", "bathroom plant"],
@@ -300,9 +299,9 @@ export const plants: Plant[] = [
     scientificName: "Ficus elastica",
     price: 32.99,
     images: [
-      "https://images.unsplash.com/photo-1647484416362-5e6b046d8942?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1632321505781-d1befeed8a8a?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1652275344251-1284a9fb08cc?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1508502726440-477c94bc369e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MzB8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1508502726440-477c94bc369e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MzB8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1508502726440-477c94bc369e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MzB8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
     ],
     category: "Foliage",
     tags: ["large-leaf", "statement", "air-purifying"],
@@ -330,9 +329,9 @@ export const plants: Plant[] = [
     scientificName: "Alocasia 'Polly'",
     price: 36.99,
     images: [
-      "https://images.unsplash.com/photo-1596153151533-4c987885c23a?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1600411133317-fe85b3fc78eb?auto=format&fit=crop&q=80&w=800",
-    ],
+      "https://images.unsplash.com/photo-1678855982737-02a978e8970a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MzF8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1678855982737-02a978e8970a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MzF8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1678855982737-02a978e8970a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MzF8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080"],
     category: "Foliage",
     tags: ["dramatic", "architectural", "tropical"],
     description:
@@ -359,9 +358,9 @@ export const plants: Plant[] = [
     scientificName: "Pilea peperomioides",
     price: 23.99,
     images: [
-      "https://images.unsplash.com/photo-1614594576637-05fd220eff5d?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1611211994948-62a7da1cd157?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1593691509543-c55fb32d8de5?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1697938955710-f44cb901c444?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MzJ8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1697938955710-f44cb901c444?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MzJ8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://images.unsplash.com/photo-1697938955710-f44cb901c444?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MzJ8fGZsb3dlciUyMHBvdHxlbnwwfHx8fDE3NDQzOTUyNzF8MA&ixlib=rb-4.0.3&q=80&w=1080",
     ],
     category: "Foliage",
     tags: ["trendy", "pet friendly", "easy care"],
@@ -384,6 +383,8 @@ export const plants: Plant[] = [
     ],
   },
 ];
+
+
 
 export const plantCategories = [...new Set(plants.map(plant => plant.category))];
 
